@@ -31,7 +31,7 @@ export default function Footer() {
                             whileHover={{ rotate: 0 }}
                             transition={{ duration: 0.3 }}
                         >
-              ->
+                            {"->"}
                         </motion.span>
                     </motion.h2>
                 </div>

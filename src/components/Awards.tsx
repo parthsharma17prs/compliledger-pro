@@ -54,7 +54,7 @@ export default function Awards() {
                             <div className="flex items-center gap-3 text-accent font-bold uppercase text-sm tracking-widest relative overflow-hidden group/btn">
                                 <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">View Project</span>
                                 <span className="w-8 h-8 rounded-full border border-accent flex items-center justify-center relative z-10 group-hover/btn:border-white transition-colors duration-300">
-                                    <span className="transform -rotate-45 group-hover/btn:rotate-0 transition-transform duration-300 text-lg group-hover/btn:text-white">-></span>
+                                    <span className="transform -rotate-45 group-hover/btn:rotate-0 transition-transform duration-300 text-lg group-hover/btn:text-white">{"->"}</span>
                                 </span>
 
                                 {/* Red Fill on Hover */}
