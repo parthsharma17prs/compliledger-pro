@@ -17,7 +17,7 @@ export default function FeaturedWorks() {
         <section className="py-24 px-6 md:px-12 bg-black text-white w-full border-t border-white/10">
 
             <div className="flex justify-between items-end mb-16">
-                <h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase">Featured Works©</h2>
+                <h2 className="text-4xl md:text-6xl font-normal font-bebas tracking-tight uppercase">Featured Works©</h2>
                 <motion.button
                     whileHover={{ x: 5 }}
                     className="text-sm md:text-base border-b border-white pb-1 hidden md:block"

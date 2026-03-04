@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Bebas_Neue } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas'
+});
 
 export const metadata: Metadata = {
   title: 'Palmer® - Minimal Portfolio & Agency',
@@ -16,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} font-sans bg-black text-white antialiased`}>
+      <body className={`${inter.variable} ${bebas.variable} font-sans bg-black text-white antialiased`}>
         {children}
       </body>
     </html>

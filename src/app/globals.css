@@ -11,6 +11,7 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --font-sans: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
+  --font-bebas: var(--font-bebas);
 }
 
 @media (prefers-color-scheme: dark) {

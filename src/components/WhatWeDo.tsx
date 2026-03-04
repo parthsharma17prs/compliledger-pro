@@ -19,13 +19,25 @@ export default function WhatWeDo() {
 
     return (
         <section className="py-24 px-6 md:px-12 bg-black text-white w-full border-t border-white/10">
-            <div className="flex flex-col md:flex-row gap-12 md:gap-24 mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase flex-shrink-0 w-full md:w-1/3">
+            <div className="flex flex-col md:flex-row gap-12 md:gap-24 mb-16 overflow-hidden">
+                <motion.h2
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-4xl md:text-5xl font-normal font-bebas tracking-tight uppercase flex-shrink-0 w-full md:w-1/3"
+                >
                     What We Do <span className="text-accent ml-2">●</span>
-                </h2>
-                <p className="text-xl md:text-2xl font-medium text-white/70 max-w-2xl">
+                </motion.h2>
+                <motion.p
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-xl md:text-2xl font-medium text-white/70 max-w-2xl"
+                >
                     We transform creative vision into reality. Partnering with forward-thinking agencies and ambitious brands to craft premium digital experiences.
-                </p>
+                </motion.p>
             </div>
 
             <div className="w-full border-t border-white/10">
