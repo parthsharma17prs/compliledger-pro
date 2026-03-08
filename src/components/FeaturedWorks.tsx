@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const works = [
-    { id: 1, title: 'Manila.', client: 'Brand Identity', img: 'https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2070&auto=format&fit=crop' },
-    { id: 2, title: 'Theo', client: 'Digital Experience', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop' },
-    { id: 3, title: 'Horizon', client: 'Art Direction', img: 'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop' },
-    { id: 4, title: 'Kroma', client: 'Web Development', img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop' },
+    { id: 1, title: 'Banking & Fintech', client: 'Automated Posture Monitoring', img: '/Users/macbook/.gemini/antigravity/brain/7fca801d-f781-4dd4-9af2-aa185be08448/banking_fintech_compliance_1772975134190.png' },
+    { id: 2, title: 'Decentralized Protocols', client: 'Privacy-Preserving Proofs', img: '/Users/macbook/.gemini/antigravity/brain/7fca801d-f781-4dd4-9af2-aa185be08448/decentralized_protocols_zkp_1772975154290.png' },
+    { id: 3, title: 'Government Compliance', client: 'Secure Infrastructure', img: '/Users/macbook/.gemini/antigravity/brain/7fca801d-f781-4dd4-9af2-aa185be08448/government_compliance_secure_infrastructure_1772975172554.png' },
+    { id: 4, title: 'Enterprise Automation', client: 'Complex Risk Mapping', img: '/Users/macbook/.gemini/antigravity/brain/7fca801d-f781-4dd4-9af2-aa185be08448/enterprise_automation_compliance_mapping_1772975189739.png' },
 ];
 
 export default function FeaturedWorks() {
@@ -17,7 +17,7 @@ export default function FeaturedWorks() {
         <section className="py-24 px-6 md:px-12 bg-black text-white w-full border-t border-white/10">
 
             <div className="flex justify-between items-end mb-16">
-                <h2 className="text-4xl md:text-6xl font-normal font-bebas tracking-tight uppercase">Featured Works©</h2>
+                <h2 className="text-4xl md:text-6xl font-normal font-bebas tracking-tight uppercase">Privacy-First Solutions©</h2>
                 <motion.button
                     whileHover={{ x: 5 }}
                     className="text-sm md:text-base border-b border-white pb-1 hidden md:block"

@@ -9,9 +9,7 @@ import GiantText from '@/components/GiantText';
 import FeaturedWorks from '@/components/FeaturedWorks';
 import WhatWeDo from '@/components/WhatWeDo';
 import ProcessGrid from '@/components/ProcessGrid';
-import GoodWords from '@/components/GoodWords';
 import Awards from '@/components/Awards';
-import Pricing from '@/components/Pricing';
 import LabNotes from '@/components/LabNotes';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
@@ -36,14 +34,12 @@ export default function Home() {
       >
         <Navbar />
         <Hero />
-        <Marquee text="Website Design  •  Branding  •  Digital Products  •  " />
+        <Marquee text="Provable Compliance  •  Zero Data Exposure  •  Zero-Knowledge Proofs  •  " />
         <WhatWeDo />
         <ProcessGrid />
         <FeaturedWorks />
-        <GoodWords />
-        <GiantText text="+XZERO®" />
+        <GiantText text="+PROOF®" />
         <Awards />
-        <Pricing />
         <LabNotes />
         <Footer />
       </motion.main>

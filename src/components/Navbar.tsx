@@ -27,7 +27,7 @@ export default function Navbar() {
                 className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8 mix-blend-difference"
             >
                 <Link href="/" className="text-2xl font-bold tracking-tight text-white flex items-center">
-                    <span className="text-accent">+</span>PALMER<sup className="text-sm font-medium">®</sup>
+                    <span className="text-accent">+</span>CompliLedger<sup className="text-sm font-medium">®</sup>
                 </Link>
 
                 <button
@@ -51,7 +51,7 @@ export default function Navbar() {
                     >
                         <div className="flex justify-between items-center mb-16">
                             <span className="text-2xl font-bold tracking-tight">
-                                <span className="text-accent">+</span>PALMER<sup className="text-sm font-medium">®</sup>
+                                <span className="text-accent">+</span>CompliLedger<sup className="text-sm font-medium">®</sup>
                             </span>
                             <button
                                 onClick={() => setIsOpen(false)}
@@ -68,7 +68,7 @@ export default function Navbar() {
                             </div>
 
                             <div className="w-full md:w-1/3 flex flex-col gap-6 order-1 md:order-2">
-                                {['Home', 'About Us', 'Services', 'Projects', 'Contact'].map((item, idx) => (
+                                {['Home', 'Infrastructure', 'Solutions', 'How it Works', 'Ecosystem'].map((item, idx) => (
                                     <motion.div
                                         key={item}
                                         initial={{ opacity: 0, x: -30 }}

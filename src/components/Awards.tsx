@@ -3,12 +3,12 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useState, useRef } from 'react';
 
-const awards = [
-    { year: '2025', title: 'Awwwards – Site of the Day', project: 'Neozen', img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800' },
-    { year: '2024', title: 'FWA – Cutting Edge', project: 'Aerosound', img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800' },
-    { year: '2024', title: 'Red Dot – Identity', project: 'Rently', img: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=800' },
-    { year: '2023', title: 'CSSDA – Innovation', project: 'Pulse UI', img: 'https://images.unsplash.com/photo-1558655146-dbf53316982a?auto=format&fit=crop&q=80&w=800' },
-    { year: '2023', title: 'D&AD – Graphite', project: 'NexGen', img: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800' },
+const partners = [
+    { year: 'ANCHOR', title: 'Algorand Protocol', project: 'Immutable Audit Anchoring', img: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2232&auto=format&fit=crop' },
+    { year: 'PRIVACY', title: 'Aleo Network', project: 'Private ZK Computation', img: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2232&auto=format&fit=crop' },
+    { year: 'PROOF', title: 'Zcash Protocol', project: 'Confidential Attestations', img: 'https://images.unsplash.com/photo-1621416848446-9f6efdec6f0e?q=80&w=2070&auto=format&fit=crop' },
+    { year: 'OSCAL', title: 'NIST Standards', project: 'Standardized Compliance', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop' },
+    { year: 'REGULATORY', title: 'ISO/IEC Frameworks', project: 'Global Compliance Mapping', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop' },
 ];
 
 export default function Awards() {
@@ -29,19 +29,19 @@ export default function Awards() {
         >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
                 <div className="flex flex-col gap-4">
-                    <span className="text-accent font-bebas text-sm tracking-[0.4em] uppercase">Recognition</span>
+                    <span className="text-accent font-bebas text-sm tracking-[0.4em] uppercase">Ecosystem</span>
                     <h2 className="text-5xl md:text-7xl lg:text-8xl font-normal font-bebas tracking-tighter uppercase leading-[0.8]">
-                        AWARDS & <br /> <span className="text-white/20">RECOGNITION</span>
+                        NETWORK & <br /> <span className="text-white/20">PARTNERS</span>
                     </h2>
                 </div>
 
                 <p className="text-xl text-white/50 max-w-sm leading-relaxed font-sans">
-                    Pushing the boundaries of digital aesthetics and functional excellence since 2018.
+                    Leveraging world-class blockchain protocols and regulatory frameworks to deliver provable compliance.
                 </p>
             </div>
 
             <div className="w-full border-t border-white/10">
-                {awards.map((award, idx) => (
+                {partners.map((award, idx) => (
                     <AwardRow
                         key={idx}
                         award={award}
@@ -65,7 +65,7 @@ export default function Awards() {
                 }}
                 transition={{ type: "spring", stiffness: 150, damping: 20, mass: 0.5 }}
             >
-                {awards.map((award, i) => (
+                {partners.map((award, i) => (
                     <motion.img
                         key={i}
                         src={award.img}
@@ -97,7 +97,7 @@ function AwardRow({ award, isHovered, onMouseEnter, onMouseLeave }: any) {
                         {award.title}
                     </h3>
                     <span className="text-white/30 font-sans text-sm md:text-base uppercase tracking-widest">
-                        Project: {award.project}
+                        Function: {award.project}
                     </span>
                 </div>
             </div>

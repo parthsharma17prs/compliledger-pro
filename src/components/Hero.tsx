@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 
 export default function Hero() {
-    const textTitle = "PATTERN DIMENSIONS AND MOMENTS THAT CONNECT AND LEAVE A BOLD イメージ.";
+    const textTitle = "Compliance without surveillance";
     const characters = textTitle.split("");
 
     const mouseX = useMotionValue(0.5);
@@ -60,7 +60,7 @@ export default function Hero() {
                             transition={{ duration: 1, delay: 0.2, ease: "circOut" }}
                             className="text-accent font-bebas text-sm tracking-[0.5em] uppercase"
                         >
-                            Future of Digital Craft
+                            Provable Compliance. Zero Data Exposure.
                         </motion.span>
                     </div>
 
@@ -82,6 +82,15 @@ export default function Hero() {
                         ))}
                     </h1>
 
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2, duration: 1 }}
+                        className="mt-12 text-xl md:text-2xl text-white/50 max-w-2xl leading-relaxed"
+                    >
+                        Most compliance tools collect data, centralize evidence, and increase risk. CompliLedger works differently. We verify compliance state cryptographically.
+                    </motion.p>
+
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -90,15 +99,15 @@ export default function Hero() {
                     >
                         <button className="group relative px-12 py-5 bg-white text-black font-black uppercase tracking-[0.2em] text-xs rounded-full overflow-hidden transition-all duration-500 hover:text-white">
                             <div className="absolute inset-0 bg-accent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out" />
-                            <span className="relative z-10">Start a Project</span>
+                            <span className="relative z-10">Explore Infrastructure</span>
                         </button>
 
                         <div className="flex flex-col gap-1">
-                            <span className="text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold">Trusted by Industry Leaders</span>
+                            <span className="text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold">Anchored By Protocol Partners</span>
                             <div className="flex gap-4 opacity-50">
-                                <span className="text-white font-bebas text-lg">Apple</span>
-                                <span className="text-white font-bebas text-lg">Nike</span>
-                                <span className="text-white font-bebas text-lg">Meta</span>
+                                <span className="text-white font-bebas text-lg">Algorand</span>
+                                <span className="text-white font-bebas text-lg">Aleo</span>
+                                <span className="text-white font-bebas text-lg">Zcash</span>
                             </div>
                         </div>
                     </motion.div>

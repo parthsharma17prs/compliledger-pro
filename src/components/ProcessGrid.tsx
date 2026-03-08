@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const steps = [
-    { id: '01', title: 'Discover', desc: 'Understanding your business, target audience, and project goals.' },
-    { id: '02', title: 'Define', desc: 'Creating a strategic plan and defining the scope and structure.' },
-    { id: '03', title: 'Design', desc: 'Crafting visually stunning designs that align with your brand.' },
-    { id: '04', title: 'Deliver', desc: 'Building, testing, and launching the final product to the world.' }
+    { id: '01', title: 'Ingest Securely', desc: 'Instead of full data access, we ingest minimal metadata, control signals, and configuration fingerprints.' },
+    { id: '02', title: 'Analyze Automatically', desc: 'AI agents map and classify compliance requirements, identifying gaps and testing controls autonomously.' },
+    { id: '03', title: 'Prove Cryptographically', desc: 'Leverage ZKPs to validate controls are operating correctly without revealing the underlying sensitive data.' },
+    { id: '04', title: 'Anchor Immutably', desc: 'Verification events are anchored across distributed ledgers for permanent, tamper-proof proof of compliance.' }
 ];
 
 export default function ProcessGrid() {

@@ -6,26 +6,26 @@ export default function LabNotes() {
     const posts = [
         {
             id: 1,
-            title: 'The Power of Minimalism: Why Less is More in Design',
-            category: 'Design Theory',
+            title: 'Proof-Based Compliance: A Shift to State Verification',
+            category: 'Infrastructure',
             date: 'Oct 12, 2025'
         },
         {
             id: 2,
-            title: 'The Future of Web Design: Trends You Can’t Ignore',
-            category: 'Web Trends',
+            title: 'Zero-Knowledge Proofs in Regulatory Frameworks',
+            category: 'Cryptography',
             date: 'Sep 28, 2025'
         },
         {
             id: 3,
-            title: 'My Web Design Process: From Concept to Completion',
-            category: 'Process',
+            title: 'Autonomizing Audits: AI in Continuous Assurance',
+            category: 'Agentic AI',
             date: 'Sep 15, 2025'
         },
         {
             id: 4,
-            title: 'Why Investing in Good Design Pays Off for Your Business',
-            category: 'Business Value',
+            title: 'The Future of Privacy: Secure Compliance Logic',
+            category: 'Innovation',
             date: 'Aug 04, 2025'
         }
     ];
@@ -35,7 +35,7 @@ export default function LabNotes() {
 
             {/* Background massive text overlay */}
             <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] md:text-[20vw] font-black text-white/5 whitespace-nowrap uppercase tracking-tighter mix-blend-screen pointer-events-none z-0">
-                NOTES FROM THE LAB
+                COMPLIANCE INSIGHTS
             </h2>
 
             <div className="flex justify-between items-center mb-16 relative z-10 border-b border-white/10 pb-12">
@@ -45,12 +45,12 @@ export default function LabNotes() {
                     viewport={{ once: true }}
                     className="text-5xl md:text-7xl lg:text-9xl font-normal font-bebas tracking-tighter uppercase leading-[0.8]"
                 >
-                    Lab <br /><span className="text-accent underline decoration-8 underline-offset-8">Notes</span>
+                    Deep <br /><span className="text-accent underline decoration-8 underline-offset-8">Insights</span>
                 </motion.h2>
 
                 <div className="flex flex-col items-end gap-4 text-right">
                     <p className="text-white/40 max-w-[200px] text-xs font-medium uppercase tracking-[0.2em] hidden md:block">
-                        Thoughts on design, motion, and digital craftsmanship.
+                        Philosophy on privacy, cryptography, and the future of regulatory technology.
                     </p>
                     <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest text-xs group">
                         <span className="group-hover:text-accent transition-colors">Everything</span>

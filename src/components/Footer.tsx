@@ -15,7 +15,7 @@ export default function Footer() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        Have a project in mind?
+                        Secure your infrastructure?
                     </motion.h4>
 
                     <motion.div
@@ -65,18 +65,18 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col items-end gap-2 mt-12 md:mt-0 text-white/50 font-normal font-sans">
-                    <a href="#" className="hover:text-white transition-colors">x.com/palmer</a>
-                    <a href="#" className="hover:text-white transition-colors">instagram.com/palmer</a>
+                    <a href="https://x.com/compliledger" className="hover:text-white transition-colors">x.com/compliledger</a>
+                    <a href="https://linkedin.com/company/compliledger" className="hover:text-white transition-colors">linkedin.com/compliledger</a>
                     <div className="w-full h-[1px] bg-white/10 my-2"></div>
-                    <a href="mailto:hello@palmer.com" className="hover:text-white text-lg transition-colors underline underline-offset-4 mt-2">hello@palmer.com</a>
+                    <a href="mailto:hello@compliledger.com" className="hover:text-white text-lg transition-colors underline underline-offset-4 mt-2">hello@compliledger.com</a>
                 </div>
 
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-white/40 uppercase tracking-wider font-normal font-bebas">
-                <p>© {new Date().getFullYear()} Xzero® Studio. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} CompliLedger®. All rights reserved.</p>
                 <div className="flex items-center gap-4">
-                    <p className="mt-4 md:mt-0">Made with ❤️ for Framer Clone</p>
+                    <p className="mt-4 md:mt-0">Provable Compliance. Zero Data Exposure.</p>
                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                     <span>Systems Online</span>
                 </div>

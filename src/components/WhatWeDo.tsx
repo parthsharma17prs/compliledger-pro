@@ -4,10 +4,10 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react';
 
 const services = [
-    { id: '01', title: 'Website Design', tools: 'Figma / Framer / Webflow', desc: 'Crafting premium, award-winning digital experiences that connect with audiences and drive conversion.' },
-    { id: '02', title: 'Digital Products', tools: 'React / Next.js / Tailwind', desc: 'Building scalable and responsive applications with the most advanced technology stacks.' },
-    { id: '03', title: 'Motion & Content', tools: 'After Effects / Spline / Rive', desc: 'Adding a layer of dynamism that breathes life into interfaces through fluid micro-interactions.' },
-    { id: '04', title: 'Strategy & Positioning', tools: 'Miro / Notion / FigJam', desc: 'Aligning business objectives directly with user needs through comprehensive research and planning.' },
+    { id: '01', title: 'Continuous Compliance', tools: 'Agentic AI / OSCAL / NIST', desc: 'Automated monitoring of systems and policies to ensure persistent adherence to regulatory standards through continuous posture verification.' },
+    { id: '02', title: 'AI-Driven Analysis', tools: 'LLM / Reasoning Agents / Python', desc: 'Agentic AI that autonomously maps, classifies, and tests compliance requirements against complex system metadata and configurations.' },
+    { id: '03', title: 'ZK Evaluation', tools: 'Aleo / Leo / ZKPs', desc: 'Validating security controls using Zero-Knowledge Proofs, allowing compliance logic to execute privately without revealing sensitive data.' },
+    { id: '04', title: 'Immutable Anchoring', tools: 'Algorand / Zcash / Blockchain', desc: 'Creating a tamper-proof audit trail by anchoring verification events across distributed ledgers for permanent, provable assurance.' },
 ];
 
 export default function WhatWeDo() {
