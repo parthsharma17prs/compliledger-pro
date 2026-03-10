@@ -35,7 +35,7 @@ export default function LabNotes() {
     ];
 
     return (
-        <section className="py-20 px-6 md:px-12 bg-black text-white w-full border-t border-white/10 relative overflow-hidden xl:pl-32">
+        <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-black via-slate-900/40 to-black text-white w-full border-t border-white/10 relative overflow-hidden xl:pl-32">
 
             {/* Phase Indicator */}
             <div className="absolute left-6 top-60 hidden xl:flex flex-col items-center gap-12 z-20">
@@ -55,7 +55,7 @@ export default function LabNotes() {
                         viewport={{ once: true }}
                         className="text-5xl md:text-7xl lg:text-[7rem] font-normal font-bebas tracking-tighter uppercase leading-[0.9] py-2"
                     >
-                        INTEL & <br /><span className="text-accent underline underline-offset-[20px] decoration-accent/20">REPORTS</span>
+                        INTEL & <br /><span className="bg-gradient-to-r from-accent via-white to-accent bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(100,116,139,0.3)] underline underline-offset-[20px] decoration-accent/40">REPORTS</span>
                     </motion.h2>
                 </div>
 
@@ -80,10 +80,10 @@ export default function LabNotes() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                        className="group cursor-pointer border-r border-b border-white/10 p-10 hover:bg-white/[0.01] transition-all duration-700 relative flex flex-col justify-between min-h-[350px]"
+                        className="group cursor-pointer border-r border-b border-white/10 p-10 hover:bg-accent/[0.05] hover:border-r-accent/30 hover:border-b-accent/30 hover:shadow-[0_0_30px_rgba(100,116,139,0.1)] transition-all duration-700 relative flex flex-col justify-between min-h-[350px] overflow-hidden"
                     >
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-1000 overflow-hidden pointer-events-none">
-                            <img src={post.img} className="w-full h-full object-cover grayscale" alt="" />
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-1000 pointer-events-none">
+                            <img src={post.img} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="" />
                         </div>
 
                         <div className="relative z-10">

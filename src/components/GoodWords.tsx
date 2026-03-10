@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const testimonials = [
-    { quote: "CompliLedger didn't just automate our audits; they replaced them with mathematical certainty. Invaluable infrastructure.", author: "Marcus Thorne", role: "CTO @ Global FinStream" },
+    { quote: "CompliLedger didn't just automate our audits; they replaced them with mathematical certainty. Invaluable infrastructure.", author: "Parth Sharma", role: "CTO @ Global FinStream" },
     { quote: "The ZK implementation is the most robust we've seen. We now verify our governance protocols without exposing a single line of sensitive metadata.", author: "Dr. Elena Vance", role: "Head of Infrastructure @ Protocol Labs" },
     { quote: "Finally, a solution that understands enterprise privacy. Persistent verification is the new standard for government standards.", author: "Agent X-90", role: "Security Architect @ Cyber Command" },
     { quote: "Their agentic AI system caught a logic vulnerability in our smart contracts that three human audits missed. Truly next-level.", author: "Satoshi Nakamoto (Simulated)", role: "Lead Dev @ Nexus Protocol" },
@@ -14,7 +14,7 @@ const testimonials = [
     { quote: "The most significant advancement in compliance since the introduction of SOC2. A complete paradigm shift.", author: "Robert Chen", role: "Head of Risk @ Axiom Bank" },
     { quote: "Immutable audit trails on Algorand provide our stakeholders with unprecedented transparency without compromising our privacy.", author: "Sofia Rodriguez", role: "COO @ Vertigo Assets" },
     { quote: "Zero-Knowledge proofs are the future of digital trust, and CompliLedger is leading the charge with elegant, scalable solutions.", author: "Alan Turing (Legacy AI)", role: "Chief Scientist @ Cipher Labs" },
-    { quote: "We've reduced our compliance costs by 70% while improving our security posture by 10x. The ROI is undeniable.", author: "James Wilson", role: "CFO @ TechHorizon" },
+    { quote: "We've reduced our compliance costs by 70% while improving our security posture by 10x. The ROI is undeniable.", author: "Vikram Desai", role: "CFO @ TechHorizon" },
 ];
 
 

@@ -55,7 +55,7 @@ export default function Pricing() {
                     <div className="relative p-1.5 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 flex gap-2 w-fit">
                         <motion.div
                             layout
-                            className="absolute inset-y-1.5 bg-accent rounded-xl shadow-[0_0_20px_rgba(255,77,0,0.3)]"
+                            className="absolute inset-y-1.5 bg-accent rounded-xl shadow-[0_0_20px_rgba(100,116,139,0.3)]"
                             initial={false}
                             animate={{
                                 x: isSubscription ? 0 : 'calc(100% + 8px)',
@@ -166,7 +166,7 @@ function PricingCard({ title, price, period, badge, description, features, butto
             <div className="relative">
                 <div className="flex justify-between items-start mb-8">
                     <span className="text-accent text-xs font-bold uppercase tracking-[0.3em] font-bebas">{title}</span>
-                    <div className="bg-accent text-black text-[10px] font-black uppercase px-4 py-1.5 rounded-full tracking-widest shadow-[0_0_20px_rgba(255,77,0,0.4)]">
+                    <div className="bg-accent text-black text-[10px] font-black uppercase px-4 py-1.5 rounded-full tracking-widest shadow-[0_0_20px_rgba(100,116,139,0.4)]">
                         {badge}
                     </div>
                 </div>
@@ -203,7 +203,7 @@ function PricingCard({ title, price, period, badge, description, features, butto
             <motion.button
                 whileHover={{ scale: 1.02, y: -5 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-7 mt-12 bg-white text-black font-black uppercase tracking-[0.2em] text-sm rounded-2xl shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)] hover:bg-accent hover:shadow-[0_20px_50px_-10px_rgba(255,77,0,0.4)] transition-all duration-500"
+                className="w-full py-7 mt-12 bg-white text-black font-black uppercase tracking-[0.2em] text-sm rounded-2xl shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)] hover:bg-accent hover:shadow-[0_20px_50px_-10px_rgba(100,116,139,0.4)] transition-all duration-500"
             >
                 {buttonText}
             </motion.button>

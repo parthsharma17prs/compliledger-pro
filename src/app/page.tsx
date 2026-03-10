@@ -50,7 +50,7 @@ export default function Home() {
 
         <SystemBlueprint />
 
-        <GiantText text="+PROOF®" />
+        <GiantText text="+COMPLILEDGER®" />
 
         <StickySection index={1}>
           <FeaturedWorks />

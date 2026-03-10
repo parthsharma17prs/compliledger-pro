@@ -50,7 +50,7 @@ export default function Hero() {
             <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.02] flex items-center">
                 <motion.div
                     style={{ x: watermarkX }}
-                    className="text-[40rem] font-black font-bebas whitespace-nowrap leading-none uppercase select-none"
+                    className="text-[40rem] font-black font-bebas whitespace-nowrap leading-none uppercase select-none will-change-transform"
                 >
                     TRUST_PROTOCOL &nbsp; COMPLIANCE_NODE &nbsp; ZERO_DATA &nbsp;
                 </motion.div>
@@ -60,11 +60,11 @@ export default function Hero() {
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
                     animate={{
-                        scale: [1, 1.2, 1],
-                        opacity: [0.05, 0.1, 0.05],
+                        scale: [1, 1.1, 1],
+                        opacity: [0.03, 0.08, 0.03],
                     }}
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                    className="absolute -top-[10%] -right-[5%] w-[1200px] h-[1200px] bg-accent blur-[250px] rounded-full"
+                    className="absolute -top-[10%] -right-[5%] w-[1200px] h-[1200px] bg-accent blur-[250px] rounded-full will-change-transform"
                 />
             </div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
                         <motion.div
                             initial={{ scaleX: 0 }}
                             animate={{ scaleX: 1 }}
-                            transition={{ duration: 1.5, ease: "circOut" }}
+                            transition={{ duration: 1.2, ease: "circOut" }}
                             className="w-12 h-[1px] bg-accent origin-left"
                         />
                         <motion.span
@@ -94,11 +94,11 @@ export default function Hero() {
                             <div key={index} className="overflow-hidden relative">
                                 <motion.span
                                     className={`inline-block ${line === "surveillance" ? "text-white/20" : "text-white"} relative`}
-                                    initial={{ y: "110%", skewY: 10, scale: 1.2 }}
-                                    animate={{ y: 0, skewY: 0, scale: 1 }}
+                                    initial={{ y: "110%", skewY: 10 }}
+                                    animate={{ y: 0, skewY: 0 }}
                                     transition={{
-                                        duration: 1.6,
-                                        delay: index * 0.2,
+                                        duration: 1.4,
+                                        delay: index * 0.15,
                                         ease: [0.16, 1, 0.3, 1]
                                     }}
                                 >
@@ -109,7 +109,7 @@ export default function Hero() {
                                         <motion.div
                                             animate={{ left: ['-100%', '200%'] }}
                                             transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
-                                            className="absolute top-0 bottom-0 w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 pointer-events-none"
+                                            className="absolute top-0 bottom-0 w-20 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none"
                                         />
                                     )}
                                 </motion.span>
@@ -120,9 +120,9 @@ export default function Hero() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <motion.p
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 1.4, duration: 1 }}
+                            transition={{ delay: 1.2, duration: 0.8 }}
                             className="text-xl md:text-2xl text-white/50 max-w-xl leading-relaxed font-light"
                         >
                             Most compliance tools <span className="text-white/80">collect data</span>, centralize evidence, and increase risk. CompliLedger works differently. We verify compliance state <span className="text-accent italic font-medium tracking-tight">cryptographically</span>.
@@ -131,7 +131,7 @@ export default function Hero() {
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.8, duration: 1 }}
+                            transition={{ delay: 1.5, duration: 0.8 }}
                             className="flex flex-col gap-6 justify-end border-l border-white/5 pl-8 md:pl-12"
                         >
                             <div className="flex flex-col gap-1">
@@ -150,9 +150,9 @@ export default function Hero() {
                     </div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 2.2, duration: 1 }}
+                        transition={{ delay: 1.8, duration: 0.8 }}
                         className="mt-20 flex flex-col md:flex-row gap-12 md:items-center"
                     >
                         <Magnetic strength={0.25}>
@@ -174,23 +174,23 @@ export default function Hero() {
                 <div className="perspective-[2500px] w-full lg:w-[700px] flex-shrink-0 mt-20 lg:mt-0">
                     <motion.div
                         style={{ rotateX, rotateY }}
-                        className="relative h-[800px] lg:h-[950px] overflow-hidden rounded-[4rem] bg-neutral-900 border border-white/5 shadow-[0_120px_200px_-50px_rgba(0,0,0,0.9)]"
-                        initial={{ opacity: 0, scale: 0.85, rotateY: -20 }}
+                        className="relative h-[800px] lg:h-[950px] overflow-hidden rounded-[4rem] bg-neutral-900 border border-white/5 shadow-[0_120px_200px_-50px_rgba(0,0,0,0.9)] will-change-transform"
+                        initial={{ opacity: 0, scale: 0.95, rotateY: -10 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                        transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+                        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
                     >
                         <motion.img
-                            style={{ x: imgX, y: imgY, scale: 1.25 }}
+                            style={{ x: imgX, y: imgY, scale: 1.15 }}
                             src="https://framerusercontent.com/images/klui2LLRQBdbyFubR7YMjvGySA.jpg"
                             alt="Technical Infrastructure"
-                            className="w-full h-full object-cover brightness-[0.8]"
+                            className="w-full h-full object-cover brightness-[0.8] will-change-transform"
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-black/90 via-transparent to-accent/5" />
 
                         {/* Interactive Floating Card */}
                         <motion.div
-                            style={{ x: useTransform(springX, [0, 1], [50, -50]), y: useTransform(springY, [0, 1], [50, -50]) }}
-                            className="absolute bottom-16 left-16 p-10 bg-black/80 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] w-[380px] shadow-2xl group transition-all duration-700 hover:border-accent/40"
+                            style={{ x: useTransform(springX, [0, 1], [30, -30]), y: useTransform(springY, [0, 1], [30, -30]) }}
+                            className="absolute bottom-16 left-16 p-10 bg-black/80 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] w-[380px] shadow-2xl group transition-all duration-700 hover:border-accent/40 will-change-transform"
                         >
                             <div className="flex flex-col gap-6">
                                 <div className="flex justify-between items-start">

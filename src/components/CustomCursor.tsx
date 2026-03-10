@@ -8,7 +8,7 @@ export default function CustomCursor() {
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
-    const springConfig = { stiffness: 500, damping: 28, mass: 0.5 };
+    const springConfig = { stiffness: 120, damping: 20, mass: 0.5 }; // Smoother, floatier cursor
     const cursorXSpring = useSpring(cursorX, springConfig);
     const cursorYSpring = useSpring(cursorY, springConfig);
 
@@ -22,7 +22,7 @@ export default function CustomCursor() {
         const handleMouseLeave = () => setIsVisible(false);
         const handleMouseEnter = () => setIsVisible(true);
 
-        window.addEventListener("mousemove", moveCursor);
+        window.addEventListener("mousemove", moveCursor, { passive: true });
         document.addEventListener("mouseleave", handleMouseLeave);
         document.addEventListener("mouseenter", handleMouseEnter);
 
@@ -35,7 +35,7 @@ export default function CustomCursor() {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-8 h-8 bg-accent rounded-full pointer-events-none z-[9999] mix-blend-difference"
+            className="fixed top-0 left-0 w-8 h-8 bg-accent rounded-full pointer-events-none z-[9999] mix-blend-difference will-change-transform"
             style={{
                 translateX: cursorXSpring,
                 translateY: cursorYSpring,
@@ -44,9 +44,9 @@ export default function CustomCursor() {
                 opacity: isVisible ? 1 : 0,
                 scale: isVisible ? 1 : 0,
             }}
-            transition={{ opacity: { duration: 0.2 }, scale: { duration: 0.2 } }}
+            transition={{ opacity: { duration: 0.15 }, scale: { duration: 0.2, ease: "easeOut" } }}
         >
-            <div className="absolute inset-0 bg-accent rounded-full blur-[4px] opacity-50" />
+            <div className="absolute inset-0 bg-accent rounded-full opacity-40" />
         </motion.div>
     );
 }

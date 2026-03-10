@@ -27,55 +27,56 @@ export default function TeamPortraits() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-1 relative z-10 border-l border-t border-white/5 bg-white/5">
+            <div className="flex flex-col md:flex-row w-full h-[800px] md:h-[650px] gap-4 relative z-10 border-l border-white/5 pl-4 md:pl-12 group/container">
                 {team.map((member, idx) => (
                     <motion.div
                         key={idx}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: idx * 0.2 }}
-                        className="group relative bg-black p-8 md:p-12 flex flex-col gap-10 hover:bg-white/[0.02] transition-colors duration-700"
+                        transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                        className="group relative flex-1 md:hover:flex-[3] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden rounded-3xl cursor-pointer bg-neutral-900 border border-white/10 md:hover:border-accent/40 flex flex-col justify-between p-6 md:p-10"
                     >
-                        {/* Member Metadata Header */}
-                        <div className="flex justify-between items-start">
+                        {/* Background Image */}
+                        <img
+                            src={member.img}
+                            className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-90 transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] scale-125 group-hover:scale-100"
+                            alt={member.name}
+                        />
+                        {/* Dark gradient overlay so text is readable */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90 group-hover:opacity-40 transition-all duration-[800ms]" />
+
+                        {/* Top Meta info */}
+                        <div className="flex justify-between items-start relative z-10 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black font-mono text-accent tracking-tighter">{member.id}</span>
-                                <span className="text-xs font-bebas text-white/40 uppercase tracking-widest">{member.role}</span>
+                                <span className="text-[10px] font-black font-mono text-white/50 tracking-tighter">{member.id}</span>
                             </div>
                             <div className={`px-2 py-0.5 rounded-sm border text-[9px] font-black uppercase tracking-tighter ${member.status === 'ACTIVE' ? 'border-accent-lime text-accent-lime bg-accent-lime/5' : 'border-white/20 text-white/40'}`}>
                                 {member.status}
                             </div>
                         </div>
 
-                        {/* Portrait */}
-                        <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-900 border border-white/10 group-hover:border-accent/40 transition-all duration-1000 relative">
-                            <img
-                                src={member.img}
-                                className="w-full h-full object-cover grayscale brightness-40 group-hover:grayscale-0 group-hover:brightness-90 transition-all duration-1000 scale-110 group-hover:scale-100"
-                                alt={member.name}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+                        {/* Bottom Content */}
+                        <div className="relative z-10 flex flex-col gap-2">
+                            <h3 className="text-4xl md:text-5xl lg:text-7xl font-normal font-bebas uppercase tracking-tighter text-white group-hover:text-white transition-colors duration-500 whitespace-nowrap">
+                                {member.name}
+                            </h3>
+                            {/* Description hidden until hover (on desktop) */}
+                            <div className="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+                                <div className="overflow-hidden">
+                                    <div className="pt-2 md:pt-4 flex flex-col gap-4">
+                                        <span className="text-accent font-bebas text-xl md:text-2xl uppercase tracking-widest">{member.role}</span>
+                                        <p className="text-white/70 text-sm md:text-base font-light leading-relaxed font-sans border-l border-white/20 pl-4 max-w-sm whitespace-normal">
+                                            {member.bio}
+                                        </p>
 
-                            {/* Scanning Effect Overlay */}
-                            <motion.div
-                                animate={{ top: ['-10%', '110%'] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                                className="absolute left-0 right-0 h-[1px] bg-accent/30 blur-sm pointer-events-none"
-                            />
-                        </div>
-
-                        {/* Details */}
-                        <div className="flex flex-col gap-4">
-                            <h3 className="text-4xl md:text-5xl font-normal font-bebas uppercase tracking-tighter text-white group-hover:text-accent transition-colors duration-500">{member.name}</h3>
-                            <p className="text-white/40 text-lg font-light leading-snug font-sans italic border-l border-white/10 pl-6">
-                                {member.bio}
-                            </p>
-                        </div>
-
-                        <div className="mt-auto pt-8 border-t border-white/5 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-accent">Access Personnel Profile</span>
-                            <span className="text-2xl text-accent">→</span>
+                                        <div className="mt-4 flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-white/80 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
+                                            <span>Access Profile</span>
+                                            <span className="text-lg">→</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 ))}

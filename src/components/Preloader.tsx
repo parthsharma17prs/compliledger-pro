@@ -28,7 +28,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
 
         const timeout = setTimeout(() => {
             setIndex(index + 1);
-        }, 250); // 250ms per word
+        }, 500); // 500ms per word
 
         return () => clearTimeout(timeout);
     }, [index, onComplete]);

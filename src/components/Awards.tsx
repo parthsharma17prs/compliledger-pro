@@ -37,7 +37,7 @@ export default function Awards() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-white/5 relative z-10">
+            <div className="flex flex-col border-t border-l border-white/5 relative z-10 w-full">
                 {partners.map((partner, idx) => (
                     <motion.div
                         key={idx}
@@ -45,35 +45,34 @@ export default function Awards() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                        className="group border-r border-b border-white/10 p-12 flex flex-col gap-10 hover:bg-white/[0.01] transition-all duration-700 h-[350px] relative"
+                        className="group border-r border-b border-white/10 p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-accent/[0.05] hover:pl-16 transition-all duration-700 relative overflow-hidden"
                     >
-                        {/* Background Technical Noise */}
+                        {/* Background Reveal */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-1000 pointer-events-none">
+                            <img src={partner.img} className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" alt="" />
+                        </div>
                         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-cover mix-blend-overlay" />
 
-                        <div className="flex justify-between items-start relative z-10">
-                            <span className="text-accent font-bebas text-2xl tracking-tighter opacity-40">/{partner.year}</span>
-                            <div className="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-sm border border-white/5">
-                                <div className="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse" />
-                                <span className="text-[9px] font-black uppercase tracking-widest text-white/60">{partner.status}</span>
+                        <div className="flex items-center gap-12 w-full md:w-1/3 relative z-10">
+                            <span className="text-accent font-bebas text-3xl md:text-5xl tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity duration-500">/{partner.year}</span>
+                            <div className="flex items-center gap-2 bg-white/5 px-4 py-1.5 rounded-sm border border-white/5 group-hover:border-accent/40 transition-colors duration-500">
+                                <div className="w-2 h-2 rounded-full bg-accent-lime animate-pulse" />
+                                <span className="text-[10px] font-black uppercase tracking-widest text-white/80">{partner.status}</span>
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-2 relative z-10">
-                            <h3 className="text-3xl md:text-4xl font-normal font-bebas uppercase tracking-tighter text-white group-hover:text-accent transition-colors duration-500">
+                        <div className="flex flex-col gap-2 w-full md:w-1/3 relative z-10">
+                            <h3 className="text-4xl md:text-6xl font-normal font-bebas uppercase tracking-tighter text-white group-hover:text-accent group-hover:drop-shadow-[0_0_15px_rgba(100,116,139,0.8)] transition-all duration-500">
                                 {partner.title}
                             </h3>
-                            <p className="text-lg font-bebas text-white/30 uppercase tracking-tight leading-none italic">
+                            <p className="text-xl font-bebas text-white/40 uppercase tracking-tight leading-none italic group-hover:text-white/80 transition-colors duration-500">
                                 {partner.project}
                             </p>
                         </div>
 
-                        <div className="mt-auto relative z-10 flex items-end justify-between">
-                            <div className="flex flex-col gap-1">
-                                <span className="text-[9px] font-black uppercase tracking-widest text-white/10">Verification Protocol</span>
-                                <div className="h-[1px] w-12 bg-white/10 group-hover:w-full transition-all duration-700 origin-left" />
-                            </div>
-                            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/20 group-hover:border-accent group-hover:text-accent transition-all duration-500">
-                                <span className="text-xl">→</span>
+                        <div className="mt-8 md:mt-0 relative z-10 flex items-center justify-end w-full md:w-1/3">
+                            <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-white/20 group-hover:bg-accent group-hover:border-accent group-hover:text-black group-hover:scale-110 transition-all duration-500 shadow-[0_0_0_rgba(100,116,139,0)] group-hover:shadow-[0_0_30px_rgba(100,116,139,0.5)]">
+                                <span className="text-2xl">→</span>
                             </div>
                         </div>
                     </motion.div>

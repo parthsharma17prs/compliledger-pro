@@ -3,7 +3,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --accent: #FF4D00;
+  --accent: #64748B;
   --accent-lime: #D0FF00;
 }
 
@@ -20,7 +20,7 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
-    --accent: #FF4D00;
+    --accent: #64748B;
   }
 }
 
@@ -56,7 +56,7 @@ body::after {
   right: -10%;
   width: 50%;
   height: 50%;
-  background: radial-gradient(circle, rgba(255, 77, 0, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(100, 116, 139, 0.1) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 1000;

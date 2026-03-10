@@ -45,7 +45,7 @@ export default function CallToAction() {
                         <motion.h2
                             className={`text-7xl md:text-[12rem] lg:text-[16rem] font-normal font-bebas leading-[0.8] tracking-tighter uppercase cursor-pointer transition-all duration-700 ${isHovered ? 'text-white' : 'text-white/20'}`}
                             style={{
-                                textShadow: isHovered ? '0 0 80px rgba(255, 60, 60, 0.5)' : 'none'
+                                textShadow: isHovered ? '0 0 80px rgba(100, 116, 139, 0.5)' : 'none'
                             }}
                         >
                             LET'S WORK <br /> <span className={isHovered ? 'text-accent' : 'text-white/20'}>TOGETHER</span>
